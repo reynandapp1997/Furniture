@@ -26,6 +26,8 @@ const api = 'http://192.168.43.197:3000'; // example
 
 ### Build The Application
 
+Before build the release version of the application, please follow this documentation to [Signed APK](https://facebook.github.io/react-native/docs/signed-apk-android)
+
 To build the project just simply run this command on terminal
 
 ```sh
