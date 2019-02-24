@@ -10,7 +10,7 @@ yarn install
 
 ### Running locally
 
-Go open files in src > redux > actions > index.js, and edit the following line. And change it with your own local server
+Go open file in src > redux > actions > index.js, and edit the following line. And change it with your own local server
 
 ```javascript
 const api = 'https://furniture-server.herokuapp.com';
