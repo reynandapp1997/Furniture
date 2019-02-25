@@ -8,7 +8,7 @@ First you need to install all dependencies by running :
 yarn install
 ```
 
-### Running locally
+### Running on local server
 
 Go open file in src > redux > actions > index.js, and edit the following line. And change it with your own local server
 
