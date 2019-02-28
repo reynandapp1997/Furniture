@@ -61,7 +61,6 @@ class UserUpdateScreen extends Component {
       email,
       address
     };
-    // console.log(user);
     this.props.updateUser(user, this.props.navigation);
   }
 
@@ -73,7 +72,6 @@ class UserUpdateScreen extends Component {
         [{
           text: 'Ok',
           onPress: () => {
-            console.log('executed');
             this.props.removeError();
             this.props.getUser();
           }

@@ -62,7 +62,6 @@ class UserAddScreen extends Component {
         [{
           text: 'Ok',
           onPress: () => {
-            console.log('executed');
             this.props.removeError();
             this.props.getUser();
           }
