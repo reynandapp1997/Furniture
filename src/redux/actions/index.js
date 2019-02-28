@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 /* eslint-disable no-underscore-dangle */
 import {
-  GET_FURNITURES_ERROR, GET_FURNITURES, GET_FURNITURES_LOADING, GET_USERS_ERROR, GET_USERS_LOADING, GET_USERS, NAME, USERNAME, PASSWORD, LEVEL, EMAIL, ADDRESS, CLEAR_FORM, NAME_ERROR, USERNAME_ERROR, PASSWORD_ERROR, LEVEL_ERROR, ADD_ERROR,
+  GET_FURNITURES_ERROR, GET_FURNITURES, GET_FURNITURES_LOADING, GET_USERS_ERROR, GET_USERS_LOADING, GET_USERS, NAME, USERNAME, PASSWORD, LEVEL, EMAIL, ADDRESS, CLEAR_FORM, NAME_ERROR, USERNAME_ERROR, PASSWORD_ERROR, LEVEL_ERROR, ADD_ERROR, REMOVE_ERROR,
 } from '../../constants/strings';
 
 /* eslint-disable no-undef */
@@ -186,6 +186,10 @@ export const deleteUser = id => dispatch => {
     })
     .then(() => {
       clearTimeout(timeout);
+      dispatch({
+        type: ADD_ERROR,
+        payload: 'Delete User Success'
+      });
     })
     .catch(() => {
       clearTimeout(timeout);
@@ -252,4 +256,10 @@ export const updateUser = (form, nav) => dispatch => {
         });
       });
   }
+};
+
+export const removeError = () => dispatch => {
+  dispatch({
+    type: REMOVE_ERROR
+  });
 };
