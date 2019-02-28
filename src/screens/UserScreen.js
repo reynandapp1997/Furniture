@@ -21,15 +21,14 @@ import {
 } from '../constants/styles';
 import {
   getUser,
-  deleteUser
+  deleteUser,
+  removeError
 } from '../redux/actions';
 import CardComponent from '../components/CardComponent';
 
 class UserScreen extends Component {
   componentDidMount() {
-    this.props.navigation.addListener('willFocus', () => {
-      this.props.getUser();
-    });
+    this.props.getUser();
   }
 
   deleteUser(id) {
@@ -106,7 +105,11 @@ class UserScreen extends Component {
         this.props.form.addError,
         [{
           text: 'Ok',
-          onPress: () => null
+          onPress: () => {
+            console.log('executed');
+            this.props.removeError();
+            this.props.getUser();
+          }
         }]
       );
     }
@@ -126,5 +129,6 @@ const mapStateToProps = state => ({
 
 export default connect(mapStateToProps, {
   getUser,
-  deleteUser
+  deleteUser,
+  removeError
 })(UserScreen);
