@@ -89,7 +89,7 @@ class FurnitureScreen extends Component {
           refreshControl={
             <RefreshControl
               colors={['black', 'red', 'green', 'blue']}
-              onRefresh={() => this.props.getFurniture()}
+              onRefresh={() => this.props.getFurniture(this.state.category)}
             />
           }
           ListEmptyComponent={(<View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}><Text>Tidak ada furniture</Text></View>)}
