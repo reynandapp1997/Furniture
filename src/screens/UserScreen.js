@@ -27,7 +27,9 @@ import CardComponent from '../components/CardComponent';
 
 class UserScreen extends Component {
   componentDidMount() {
-    this.props.getUser();
+    this.props.navigation.addListener('willFocus', () => {
+      this.props.getUser();
+    });
   }
 
   deleteUser(id) {
