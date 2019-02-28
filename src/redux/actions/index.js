@@ -236,8 +236,8 @@ export const updateUser = (form, nav) => dispatch => {
         },
         body: JSON.stringify(form)
       })
-      .then(async () => {
-        await clearTimeout(timeout);
+      .then(() => {
+        clearTimeout(timeout);
         nav.pop();
         dispatch({
           type: ADD_ERROR,
