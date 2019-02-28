@@ -17,7 +17,9 @@ import {
 import {
   onFormChange,
   clearForm,
-  updateUser
+  updateUser,
+  removeError,
+  getUser
 } from '../redux/actions';
 import {
   styles
@@ -70,7 +72,11 @@ class UserUpdateScreen extends Component {
         this.props.form.addError,
         [{
           text: 'Ok',
-          onPress: () => null
+          onPress: () => {
+            console.log('executed');
+            this.props.removeError();
+            this.props.getUser();
+          }
         }]
       );
     }
@@ -164,5 +170,7 @@ const mapStateToProps = state => ({
 export default connect(mapStateToProps, {
   onFormChange,
   clearForm,
-  updateUser
+  updateUser,
+  removeError,
+  getUser
 })(UserUpdateScreen);
