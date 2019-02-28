@@ -220,7 +220,7 @@ export const updateUser = (form, nav) => dispatch => {
   const timeout = setTimeout(() => {
     dispatch({
       type: ADD_ERROR,
-      payload: 'Check your internet connection 123'
+      payload: 'Check your internet connection'
     });
   }, FETCH_TIMEOUT);
   if (form.name && form.username && form.password && form.level) {
