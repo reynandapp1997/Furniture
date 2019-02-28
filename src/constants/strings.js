@@ -18,3 +18,4 @@ export const EMAIL = 'EMAIL';
 export const ADDRESS = 'ADDRESS';
 export const CLEAR_FORM = 'CLEAR_FORM';
 export const ADD_ERROR = 'ADD_ERROR';
+export const REMOVE_ERROR = 'REMOVE_ERROR';
