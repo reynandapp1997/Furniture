@@ -159,6 +159,10 @@ export const addUser = (form, nav) => dispatch => {
       .then(() => {
         clearTimeout(timeout);
         nav.pop();
+        dispatch({
+          type: ADD_ERROR,
+          payload: 'Add User Success'
+        });
       })
       .catch(() => {
         clearTimeout(timeout);
@@ -235,6 +239,10 @@ export const updateUser = (form, nav) => dispatch => {
       .then(async () => {
         await clearTimeout(timeout);
         nav.pop();
+        dispatch({
+          type: ADD_ERROR,
+          payload: 'Update User Success'
+        });
       })
       .catch(() => {
         clearTimeout(timeout);
