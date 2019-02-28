@@ -86,6 +86,7 @@ const BottomTabNavigator = createMaterialTopTabNavigator({
     }
   },
 }, {
+  swipeEnabled: false,
   initialRouteName: 'FurnitureTab',
   tabBarPosition: 'bottom',
   tabBarOptions: {
